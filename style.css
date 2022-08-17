@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(240, 78%, 98%);
+    height: 100vh;
+    background-image: url(/images/bg-top.svg),url(/images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top right,bottom left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+h1.main-header{
+    color: hsl(233, 13%, 49%);
+}
+
+/* checkbox start */
+.checkbox{
+    padding-block: 50px;
+    display: flex;
+    align-items: center;
+}
+.checkbox > span {
+    color: hsl(234, 14%, 74%);
+    margin-inline: 20px;
+    font-size: 14px;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: none;
+    display: none;
+}
+.check{
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 65px;
+    border-radius: 40px;
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+.check::before{
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .5s;
+}
+input[type="checkbox"]:checked ~ .check:before
+{
+    transform: translateX(80%);
+}
+
+/* chechkbox end */
+
+/* cards start */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* left and right card */
+.basic-card,
+.mas-card{
+    width: 325px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    color:hsl(233, 13%, 49%);
+    text-align: center;
+
+}
+.basic-card h3,
+.mas-card h3{
+    margin-block: 30px;
+}
+
+/* middle card */
+.prof-card{
+    width: 325px;
+    height: 500px;
+    background-image: linear-gradient(120deg,hsl(236, 72%, 79%), hsl(237, 63%, 64%));;
+    border-radius: 10px;
+    color: hsl(240, 78%, 98%);
+    text-align: center;
+}
+.prof-card h3{
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
+.card-amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.monthly,
+.annual{
+    font-size: 60px;
+}
+.monthly{
+    display: none;
+}
+.card-amount span{
+    font-size: 35px;
+    margin-right: 10px;
+}
+.lr-amount{
+    color: hsl(232, 13%, 33%);
+}
+.pref{
+    margin-top: 30px;
+    border-bottom: 1px solid hsl(240, 78%, 90%);
+    margin-inline: 30px;
+}
+.pref p {
+    padding: 15px 30px;
+    border-top: 1px solid hsl(240, 78%, 90%);
+}
+
+
+/* buttons */
+.submit-btn-lr,
+.submit-btn-mid{
+    width: 80%;
+    margin:30px;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+} 
+.submit-btn-lr{
+    background-image: linear-gradient(120deg,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);
+}
+.submit-btn-mid{
+    background-color: white;
+    color:hsl(237, 63%, 64%);
+}
+.submit-btn-lr:active{
+    border: 1px solid hsl(237, 63%, 64%);
+    background-image: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+.submit-btn-mid:active{
+    border: 1px solid hsl(240, 78%, 98%) ;
+    background-image:linear-gradient(120deg,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);
+}
+
+/* media  */
+
+@media screen and (max-width:975px) {
+    .container{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width:670px){
+    .container > div{
+        margin-bottom: 40px;
+    }
+}

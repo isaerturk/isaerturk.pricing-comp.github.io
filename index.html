@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        justify-self: end;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        animation: color-scheme 3s infinite;
+      }
+      @keyframes color-scheme {
+        20% {
+          color: blue;
+        }
+        40% {
+          color: white;
+        }
+        60% {
+          color: red;
+        }
+        80% {
+          color: green;
+        }
+        100% {
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-header">Our Pricing</h1>
+    <div class="checkbox">
+      <span>Annually</span>
+      <label>
+        <input type="checkbox" id="checkbox-btn" />
+        <span class="check"></span>
+      </label>
+      <span>Monthly</span>
+    </div>
+    <div class="container">
+      <div class="basic-card">
+        <h3>Basic</h3>
+        <div class="card-amount lr-amount">
+          <span>$</span>
+          <p class="basic-ann annual">199.99</p>
+          <p class="basic-monthly monthly">19.99</p>
+        </div>
+        <div class="pref">
+          <p>500 GB Storage</p>
+          <p>2 Users Allowed</p>
+          <p>Send up to 3 GB</p>
+        </div>
+        <input type="submit" class="submit-btn-lr" value="LEARN MORE" />
+      </div>
+      <div class="prof-card">
+        <h3>Proffesional</h3>
+        <div class="card-amount">
+          <span>$</span>
+          <p class="prof-ann annual">249.99</p>
+          <p class="prof-monthly monthly">24.99</p>
+        </div>
+        <div class="pref">
+          <p>1 TB Storage</p>
+          <p>5 Users Allowed</p>
+          <p>Send up to 10 GB</p>
+        </div>
+        <input type="submit" class="submit-btn-mid" value="LEARN MORE" />
+      </div>
+      <div class="mas-card">
+        <h3>Master</h3>
+        <div class="card-amount lr-amount">
+          <span>$</span>
+          <p class="mas-ann annual">399.99</p>
+          <p class="mas-monthly monthly">39.99</p>
+        </div>
+        <div class="pref">
+          <p>2 TB Storage</p>
+          <p>10 Users Allowed</p>
+          <p>Send up to 20 GB</p>
+        </div>
+        <input type="submit" class="submit-btn-lr" value="LEARN MORE" />
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.github.com/isaerturk" target="_blank">jespagheddy</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
